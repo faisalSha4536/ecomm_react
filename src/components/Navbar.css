@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.navbar{
+    height: 10%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1vw;
+    padding-right: 2vw;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+}

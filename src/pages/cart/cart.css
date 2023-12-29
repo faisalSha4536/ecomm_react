@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cart_item img{
+    width: 25%;
+}
+
+.cart_item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 30px;
+    padding-left: 50px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.count_handler{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+
+input{
+    width: 50px;
+    text-align: center;
+    height: 100%;
+}
+
+.last_button{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.last_button button{
+    padding: 10px;
+    border-radius: 10px;
+    transition: all ease .4s;
+}
+
+.last_button button:hover{
+    background-color: #111;
+    color: white;
+}
