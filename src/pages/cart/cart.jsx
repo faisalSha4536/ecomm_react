@@ -4,6 +4,7 @@ import {ShopContext} from '../../context/ShopContext'
 import { CartItem } from './cartItem'
 import './cart.css'
 import {useNavigate} from 'react-router-dom'
+import { storeData } from '../../assets/assets/data/dummyData'
 
 const Cart = () => {
   const { cartItems, totalAmount} = useContext(ShopContext)
@@ -14,7 +15,7 @@ const Cart = () => {
         <h1>Cart Items</h1>
       </div>
       <div className='item'>
-        {PRODUCTS.map((product)=>{
+        {storeData.map((product)=>{
           if(cartItems[product.id] !== 0){
             return <CartItem data = {product}/>
           }

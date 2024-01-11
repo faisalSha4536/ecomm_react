@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Cart from './pages/cart/cart';
 import Shop from './pages/shop/shop';
+import Category from './pages/shop/category'
 import {ShopContextProvider} from './context/ShopContext';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element = {<Shop/>}/>
           <Route path='/cart' element = {<Cart/>}/>
+          <Route path='/category/:type' element = {<Category/>}/>
         </Routes>
       </Router>
       </ShopContextProvider>

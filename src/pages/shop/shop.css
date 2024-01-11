@@ -52,3 +52,22 @@ html, body{
     background-color: black;
     color: white;
 }
+
+.types{
+    display: flex;  
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+.btns{
+    width: fit-content;
+}
+
+.btns button{
+    font-size: 1vw;
+    font-weight: 500;
+    padding: .5vw 1vw;
+    background-color: transparent;
+    border-radius: 10px;
+}
