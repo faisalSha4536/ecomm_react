@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { storeData } from '../../assets/assets/data/dummyData'
 import { ShopContext } from '../../context/ShopContext'
 import Product from './Product'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './shop.css'
 
 
@@ -29,7 +29,7 @@ const Category = () => {
             const cartItemsAmount = cartItems[product.id]
             return (
               <div key={index} className='product'>
-                <img src={product.img} alt="" />
+               <Link to={`/product/${type}/${id}`}><img src={product.img} alt="" /></Link> 
                 <div className="discription">
                   <p><b>{product.name}</b></p>
                   <p><b>${product.price}</b></p>
