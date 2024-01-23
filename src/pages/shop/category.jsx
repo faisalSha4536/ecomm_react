@@ -11,6 +11,7 @@ const Category = () => {
   const [category, setCategory] = useState([])
   const uniqueType = [...new Set(storeData.map((product) => product.type))]
   const { type } = useParams()
+  // const { id } = useParams()
 
   useEffect(() => {
     const fetchCategory = storeData.map((pro) => pro.type)
@@ -29,7 +30,7 @@ const Category = () => {
             const cartItemsAmount = cartItems[product.id]
             return (
               <div key={index} className='product'>
-               <Link to={`/product/${type}/${id}`}><img src={product.img} alt="" /></Link> 
+               <Link to={`/product/${type}/${product.id}`}><img src={product.img} alt="" /></Link> 
                 <div className="discription">
                   <p><b>{product.name}</b></p>
                   <p><b>${product.price}</b></p>
