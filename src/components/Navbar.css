@@ -18,6 +18,7 @@ html, body{
     justify-content: end;
     padding: 1vw;
     padding-right: 2vw;
+    position: fixed;
 }
 
 .links{

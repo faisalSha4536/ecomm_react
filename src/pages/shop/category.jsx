@@ -19,7 +19,9 @@ const Category = () => {
 
   return (
     <>
+    <div className="cat_title">
       <h1>{type}</h1>
+    </div>
 
       <div className='products'>
         {

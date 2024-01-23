@@ -9,7 +9,7 @@ export function CartItem(props) {
         <div className='cart_item'>
             <img src={img} alt="" />
             <div className="discripition">
-                <p>{name}</p>
+                <h2>{name}</h2>
                 <p>${price}</p>
                 <div className="count_handler">
                     <button onClick={() => removeFromCart(id)}>-</button>

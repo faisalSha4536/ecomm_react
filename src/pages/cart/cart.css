@@ -15,6 +15,9 @@ html, body{
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 100vh;
+    padding-top: 6vw;
+    /* margin-top: 3vw; */
 }
 
 .cart_item img{
@@ -26,6 +29,7 @@ html, body{
     align-items: center;
     width: 50%;
     gap: 30px;
+    padding: 10px 0;
     padding-left: 50px;
     border-radius: 20px;
     border: 1px solid #333;
@@ -42,17 +46,25 @@ html, body{
 .count_handler{
     width: 100%;
     overflow: hidden;
+    height: 2vw;
     margin-top: 10px;
     display: flex;
     align-items: center;
 }
 
+.count_handler button{
+    height: 100%;
+}
+
 button{
+    border: 1px solid black;
     padding: 0px 5px 0px 5px;
     cursor: pointer;
+    background-color: gainsboro;
 }
 
 input{
+    border: 1px solid black;
     width: 50px;
     text-align: center;
     height: 100%;
@@ -73,4 +85,14 @@ input{
 .last_button button:hover{
     background-color: #111;
     color: white;
+}
+
+.discripition h2{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.discripition p{
+    font-size: 1vw;
+    font-weight: 600;
 }

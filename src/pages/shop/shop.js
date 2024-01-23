@@ -2,10 +2,17 @@ import React, { useState } from 'react'
 import { PRODUCTS } from '../../products'
 import { storeData } from '../../assets/assets/data/dummyData'
 import Product from './Product'
+import { FaSearch } from "react-icons/fa";
 import './shop.css'
 import { Link } from 'react-router-dom'
+import '../../components/Searchbar/Searchbar.css'
 
-const shop = () => {
+const Shop = () => {
+  const [searchInput, setSearchInput] = useState('')
+
+  const filteredProducts = storeData.filter((product) =>
+  product.name.toLowerCase().includes(searchInput.toLowerCase())
+);
   const uniqueType = [...new Set(storeData.map((product)=>product.type))]
   return (
     <div className='shop'>
@@ -13,7 +20,14 @@ const shop = () => {
         <h1>Faisal Shop</h1>
         </div>
 
-        <div className='types'>
+        
+          <div className='search_bar'>
+        <div className="input">
+            <input type="text" value={searchInput} onChange={(e)=> setSearchInput(e.target.value)} placeholder='Search Products...'/>
+            <button><FaSearch /></button>
+        </div>      
+    </div>
+    <div className='types'>
         {
           uniqueType.map((product) => {
             return (
@@ -26,12 +40,11 @@ const shop = () => {
           </div>
        
        <div className="products" >
-        {storeData.map((product) => <Product data={product} />)}
-
-
+        {filteredProducts.map((product) => <Product data={product} />)}
         </div>
+        {filteredProducts.length === 0 && 'No product found'}
     </div>
   )
 }
 
-export default shop
+export default Shop
