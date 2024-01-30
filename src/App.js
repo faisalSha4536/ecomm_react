@@ -1,12 +1,13 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Navbar from './components/Navbar';
-import Cart from './pages/cart/cart';
-import Shop from './pages/shop/shop';
-import Category from './pages/shop/category'
+import Navbar from './components/Navbar'; 
 import {ShopContextProvider} from './context/ShopContext';
-import SingleProduct from './pages/shop/SingleProduct';
+import { Suspense, lazy } from 'react';
 
+const Cart = lazy(()=>import('./pages/cart/cart'))
+const Shop = lazy(()=>import('./pages/shop/shop'))
+const Category = lazy(()=>import('./pages/shop/category'))
+const SingleProduct = lazy(()=>import('./pages/shop/SingleProduct'))
 function App() {
   return (
     <div className="App">
@@ -14,10 +15,10 @@ function App() {
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/' element = {<Shop/>}/>
-          <Route path='/cart' element = {<Cart/>}/>
-          <Route path='/category/:type' element = {<Category/>}/>
-          <Route path='/product/:type/:id' element = {<SingleProduct/>}/>
+          <Route path='/' element = {<Suspense fallback = {<div>Loading...</div>}><Shop/></Suspense>}/>
+          <Route path='/cart' element = {<Suspense fallback = {<div>Loading...</div>}><Cart/></Suspense>}/>
+          <Route path='/category/:type' element = {<Suspense fallback = {<div>Loading...</div>}><Category/></Suspense>}/>
+          <Route path='/product/:type/:id' element = {<Suspense fallback = {<div>Loading...</div>}><SingleProduct/></Suspense>}/>
         </Routes>
       </Router>
       </ShopContextProvider>
