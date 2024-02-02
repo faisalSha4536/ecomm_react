@@ -16,7 +16,7 @@ html, body{
     padding-top: 20px;
     padding-bottom: 20px;
     height: 100vh;
-    padding-top: 6vw;
+    /* padding-top: 6vw; */
     /* margin-top: 3vw; */
 }
 
@@ -56,14 +56,14 @@ html, body{
     height: 100%;
 }
 
-button{
+.cart button{
     border: 1px solid black;
     padding: 0px 5px 0px 5px;
     cursor: pointer;
     background-color: gainsboro;
 }
 
-input{
+.count_handler input{
     border: 1px solid black;
     width: 50px;
     text-align: center;
